@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
+
 def canUnlockAll(boxes):
     """
-    Method to check if all boxes can be opened 
+    Method to check if all boxes can be opened
     """
     if len(boxes) == 0:
         return False
-
     keys = [0]
     seen = 1
     for key in keys:

@@ -5,15 +5,13 @@ def canUnlockAll(boxes):
     """
     if not boxes or len(boxes) ==0:
         return False
-    
-    seen = [False] * len(boxes)
-    seen[0] = True
-    stack = [0]
-    
-    while stack:  
-        node = stack.pop()  
-        for nei in boxes[node]:  
-            if not seen[nei]:  
-                seen[nei] = True  
-                stack.append(nei)  
-    return all(seen)
+
+    keys = [0]
+    seen = 1
+    for key in keys:
+        for i in boxes[key]:
+            if i not in keys:
+                if i != key & i <len(boxes):
+                    keys.append(i)
+                    seen += 1
+    return True

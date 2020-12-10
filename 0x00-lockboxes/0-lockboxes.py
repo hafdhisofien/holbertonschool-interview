@@ -14,6 +14,6 @@ def canUnlockAll(boxes):
                 if i != key & i <len(boxes):
                     keys.append(i)
                     seen += 1
-                else:
-                    return False
+    if seen != len(boxes):
+        return False
     return True

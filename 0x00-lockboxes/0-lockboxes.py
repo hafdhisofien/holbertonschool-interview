@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 def canUnlockAll(boxes):
     """
     Method to check if all boxes can be opened 
@@ -11,7 +12,7 @@ def canUnlockAll(boxes):
     for key in keys:
         for i in boxes[key]:
             if i not in keys:
-                if i != key & i <len(boxes):
+                if i != key and i < len(boxes):
                     keys.append(i)
                     seen += 1
     if seen != len(boxes):

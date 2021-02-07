@@ -29,14 +29,14 @@ if __name__ == "__main__":
     count = 0
     try:
         for line in stdin:
-            if len(line) >= 3:
-                parsed_items = line.split()
-                s_code = parsed_items[-2]
-                size = parsed_items [-1]
-                if s_code in status_codes:
-                    status_codes[s_code] += 1
-                file_size += int(size)
-            if count % 10 == 0:
+            try:
+                parsed = line.split()
+                file_size += int(parsed[-1])
+                if parsed[-2] in status_codes:
+                    status_codes[parsed[-2]] += 1
+            except:
+                pass
+            if count == 9:
                 print_logs()
                 count = -1
             count += 1

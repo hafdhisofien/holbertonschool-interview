@@ -31,9 +31,11 @@ if __name__ == "__main__":
         for line in stdin:
             try:
                 parsed_items = line.split()
-                file_size += int(parsed_items[-1])
-                if parsed_items[-2] in status_codes:
-                    status_codes[parsed_items[-2]] += 1
+                s_code = parsed_items[-2]
+                size = parsed_items [-1]
+                if s_code in status_codes:
+                    status_codes[s_code] += 1
+                file_size += int(size)
             except:
                 pass
             if count % 10 == 0:

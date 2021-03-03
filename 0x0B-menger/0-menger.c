@@ -1,7 +1,6 @@
 #include <math.h>
 #include <stdio.h>
 #include "menger.h"
-
 /**
  * ptchar - determines char to print '#' or ' '
  * @r: row
@@ -36,6 +35,6 @@ void menger(int level)
 	{
 		for (c = 0; c < size; ++c)
 		putchar(ptchar(r, c));
-		putchar('\n');
+		    putchar('\n');
 	}
 }

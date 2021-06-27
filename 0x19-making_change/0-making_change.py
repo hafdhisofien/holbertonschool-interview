@@ -8,7 +8,8 @@ import sys
 
 def makeChange(coins, total):
     """[summary]
-    determine the fewest number of [coins] needed to meet a given amount [total]
+    determine the fewest number of [coins] needed
+    to meet a given amount [total]
     Args:
         coins : number of coins
         total : Total number of coins

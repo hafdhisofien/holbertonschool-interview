@@ -1,0 +1,1 @@
+__ 0x1F-pascal_triangle __
